@@ -1,0 +1,31 @@
+{
+  "artists": [
+    {
+      "id": "a01",
+      "name": "Joanna",
+      "description": "Gram na ślubach 8 lat. W repertuarze Ave Maria xd",
+      "lastname": "Kruk",
+      "mainInstrument": "flet",
+      "otherInstruments": ["harp", "piano"],
+      "localisation": "Kraków"
+    },
+    {
+      "id": "a02",
+      "name": "Kamil",
+      "lastname": "Nowak",
+      "description": "Jestem z wykształcenia organistą. Z radością uświetnię Państwa uroczystości.",
+      "mainInstrument": "pianino",
+      "otherInstruments": ["śpiew", "organy"],
+      "localisation": "Wadowice"
+    },
+    {
+      "id": "a03",
+      "name": "Ania",
+      "lastname": "Kowalska",
+      "description": "Specjalność: jazz. Szukam fajnych ludzi do wspólnego grania.",
+      "mainInstrument": "śpiew",
+      "otherInstruments": ["skrzypce"],
+      "localisation": "Wadowice"
+    }
+  ]
+}

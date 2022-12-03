@@ -1,0 +1,10 @@
+{
+  "users": [
+    {
+      "id": "u01",
+      "name": "Paweł",
+      "lastname": "Pawlik",
+      "localisation": "Wadowice"
+    }
+  ]
+}
