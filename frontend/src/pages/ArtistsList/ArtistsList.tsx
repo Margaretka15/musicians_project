@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import IArtist from "../../interface/IArtist";
-import usersService from "../../services/UsersService";
+import UsersService from "../../services/UsersService";
 import ArtistItem from "./ArtistItem";
 import {CircularProgress, List} from "@mui/material";
 import SearchIcon from '@mui/icons-material/Search';
@@ -58,7 +58,10 @@ function ArtistsList() {
         setIsLoading(false);
     }
     useEffect(() => {
-        usersService("artists", handleData);
+        UsersService.getUsers().then((response) => {
+            handleData(response.data);
+        }).catch(error=>console.log(error));
+
     }, [])
     return (
         <>
@@ -77,6 +80,7 @@ function ArtistsList() {
 
                     {listItems.map((a) =>
                         <ArtistItem id={a.id}
+                                    key={a.id}
                                     name={a.name}
                                     lastname={a.lastname}
                                     localisation={a.localisation}

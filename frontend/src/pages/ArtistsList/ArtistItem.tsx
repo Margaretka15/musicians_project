@@ -12,11 +12,9 @@ type Props = {
     // img: string | "";
 }
 
-
-function ArtistItem({id, name, lastname, mainInstrument, description}: Props) {
+function ArtistItem({id, name, lastname, mainInstrument, description}: Props): JSX.Element {
     return (
         <>
-
             <ListItem key={id} alignItems="flex-start">
                 <ListItemAvatar>
                     <Avatar alt={name} src="/static/images/avatar/1.jpg"/>

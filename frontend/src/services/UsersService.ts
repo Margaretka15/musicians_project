@@ -1,12 +1,13 @@
 import axios from 'axios';
+import {urls} from "./BaseUrl";
 
-export default function usersService(url: string, callback: Function) {
+const URL = urls.getBaseUrl() + 'artists.json';
 
-    axios.get(`/data/${url}.json`)
-        .then((response) => {
-            const data = response.data;
-            // console.log(data);
-            callback(data);
-        })
-        .catch(error=>console.log(error))
+class UsersService
+{
+   getUsers () {
+     return   axios.get(URL);
+   }
+
 }
+export default new UsersService();
