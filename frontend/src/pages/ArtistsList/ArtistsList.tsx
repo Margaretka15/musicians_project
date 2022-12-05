@@ -53,14 +53,14 @@ function ArtistsList() {
     const [listItems, setListItems] = useState(Array<IArtist>);
     const [isLoading, setIsLoading] = useState(true);
 
-    const handleData = (data: { artists: [] }) => {
-        setListItems(data.artists);
+    const handleData = (artists: IArtist[]) => {
+        setListItems(artists);
         setIsLoading(false);
     }
     useEffect(() => {
         UsersService.getUsers().then((response) => {
             handleData(response.data);
-        }).catch(error=>console.log(error));
+        }).catch(error => console.log(error));
 
     }, [])
     return (
