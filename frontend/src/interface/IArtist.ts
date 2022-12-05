@@ -4,7 +4,7 @@ interface IArtist {
     lastname: string;
     description: string;
     mainInstrument: string;
-    otherInstruments: string[] | string;
+    otherInstruments: string[];
     localisation: string;
 }
 

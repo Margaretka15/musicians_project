@@ -1,6 +1,6 @@
 const getBaseUrl = (): string => {
-    return "/data/";
-    //return "http://localhost:8080/ws-message/";
+    // return "/data/";
+    return "http://localhost:8080/";
 }
 
 export const urls = {

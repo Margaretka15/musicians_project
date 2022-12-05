@@ -1,13 +1,14 @@
-import axios from 'axios';
+import axios, {AxiosResponse} from 'axios';
 import {urls} from "./BaseUrl";
+import IArtist from "../interface/IArtist";
 
-const URL = urls.getBaseUrl() + 'artists.json';
+const URL = urls.getBaseUrl() + 'artists';
 
-class UsersService
-{
-   getUsers () {
-     return   axios.get(URL);
-   }
+class UsersService {
+    getUsers() : Promise<AxiosResponse<IArtist[]>> {
+        return axios.get<IArtist[]>(URL);
+    }
 
 }
+
 export default new UsersService();
