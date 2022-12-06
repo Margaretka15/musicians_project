@@ -15,9 +15,9 @@ import java.util.List;
 @RestController
 public class DemoController {
     @GetMapping("/hello")
-    public Person hello(@RequestParam(value = "name", defaultValue = "World") String name) {
-//        return String.format("Hello %s!", name);
-        return new Person("Ania", "Kowalska");
+    public String hello(@RequestParam(value = "name", defaultValue = "World") String name) {
+        return String.format("Hello %s!", name);
+//        return new Person("Ania", "Kowalska");
     }
 
     @GetMapping("/artists")
@@ -27,8 +27,8 @@ public class DemoController {
 
         artists.add(new Artist("a01",
                 "Joanna",
-                "Gram na ślubach od 8 lat. W repertuarze Ave Maria xd",
                 "Kruczek",
+                "Gram na ślubach od 8 lat. W repertuarze Ave Maria xd",
                 "flet",
                 Arrays.asList("harp", "piano"),
                 "Kraków"));
