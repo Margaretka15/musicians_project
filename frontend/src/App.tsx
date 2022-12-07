@@ -1,11 +1,12 @@
 import React from 'react';
 import ArtistsList from "./pages/ArtistsList/ArtistsList";
+import ResponsiveAppBar from "./components/ResponsiveMenuBar";
 
 
 function App() {
   return (
     <div className="App">
-     Hello
+     <ResponsiveAppBar/>
         <ArtistsList/>
     </div>
   );

@@ -76,7 +76,7 @@ function ArtistsList() {
             </Search>
 
             {isLoading ? <CircularProgress/> :
-                <List sx={{width: '100%', bgcolor: 'background.paper'}}>
+                <List sx={{width: '60%', bgcolor: 'background.paper'}}>
 
                     {listItems.map((a) =>
                         <ArtistItem id={a.id}
