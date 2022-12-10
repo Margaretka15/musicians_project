@@ -1,6 +1,15 @@
 import React from "react";
 
-import {Avatar, Divider, ListItem, ListItemAvatar, ListItemText, Typography} from "@mui/material";
+import {
+    Avatar,
+    Button,
+    Divider,
+    ImageListItem,
+    ListItem,
+    ListItemAvatar,
+    ListItemText,
+    Typography
+} from "@mui/material";
 
 type Props = {
     id: string;
@@ -15,7 +24,7 @@ type Props = {
 function ArtistItem({id, name, lastname, mainInstrument, description}: Props): JSX.Element {
     return (
         <>
-            <ListItem key={id} alignItems="flex-start">
+            <ListItem key={id} alignItems="flex-start" >
                 <ListItemAvatar>
                     <Avatar alt={name} src="/static/images/avatar/1.jpg"/>
                 </ListItemAvatar>
@@ -35,6 +44,17 @@ function ArtistItem({id, name, lastname, mainInstrument, description}: Props): J
                         </>
                     }
                 />
+                {/*<ImageListItem>*/}
+                {/*    <ImageListItem sx={{width: 100}}>*/}
+                {/*        <img src="https://www.superprof.pl/blog/wp-content/uploads/2021/04/pianino-i-swiatelka.jpg"*/}
+                {/*             alt=""/>*/}
+                {/*    </ImageListItem>*/}
+                {/*</ImageListItem>*/}
+
+                <Button color='primary' variant='contained'>
+                    Sprawdź
+                </Button>
+                    
             </ListItem>
             <Divider variant="inset" component="li"/>
 
