@@ -4,14 +4,14 @@ import {
     Avatar,
     Button,
     Divider,
-    ImageListItem,
+    ImageListItem, Link,
     ListItem,
     ListItemAvatar,
     ListItemText,
     Typography
 } from "@mui/material";
 
-import {Link} from "react-router-dom";
+import {Link as RouterLink} from "react-router-dom";
 
 type Props = {
     id: string;
@@ -56,7 +56,10 @@ function ArtistItem({id, name, lastname, mainInstrument, description}: Props): J
                 {/*</ImageListItem>*/}
 
                 <Button color='primary' variant='contained'>
-                    <Link to={`/artist?id=${id}`}>Sprawdź</Link>
+                    {/*<RouterLink to={`/artist?id=${id}`}>Sprawdź</RouterLink>*/}
+                    <Link style={{ textDecoration: 'none' }} color={"#fff"} component={RouterLink} to={`/artist?id=${id}`} >
+                        Sprawdź
+                    </Link>
                 </Button>
 
             </ListItem>
