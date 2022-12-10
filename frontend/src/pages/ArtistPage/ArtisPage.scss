@@ -1,14 +1,14 @@
 .wrapper {
   display: flex;
   align-items: stretch;
-  margin-top: 5rem;
+  margin-top: 4rem;
 }
 .main-section {
   padding: 1%;
   display: flex;
 
   &__about {
-    padding: 5%;
+    padding: 0 5%;
     width: 100%
   }
 }

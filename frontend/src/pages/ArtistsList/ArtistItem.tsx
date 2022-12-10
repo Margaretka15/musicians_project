@@ -11,6 +11,8 @@ import {
     Typography
 } from "@mui/material";
 
+import {Link} from "react-router-dom";
+
 type Props = {
     id: string;
     name: string;
@@ -22,9 +24,11 @@ type Props = {
 }
 
 function ArtistItem({id, name, lastname, mainInstrument, description}: Props): JSX.Element {
+
+
     return (
         <>
-            <ListItem key={id} alignItems="flex-start" >
+            <ListItem key={id} alignItems="flex-start">
                 <ListItemAvatar>
                     <Avatar alt={name} src="/static/images/avatar/1.jpg"/>
                 </ListItemAvatar>
@@ -52,9 +56,9 @@ function ArtistItem({id, name, lastname, mainInstrument, description}: Props): J
                 {/*</ImageListItem>*/}
 
                 <Button color='primary' variant='contained'>
-                    Sprawdź
+                    <Link to={`/artist?id=${id}`}>Sprawdź</Link>
                 </Button>
-                    
+
             </ListItem>
             <Divider variant="inset" component="li"/>
 
