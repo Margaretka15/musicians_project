@@ -8,11 +8,10 @@ import {BrowserRouter, Routes, Route} from "react-router-dom";
 import MainPage from "./pages/MainPage";
 
 
-
 function App() {
     return (
-        <div className="App">
-            <ThemeProvider theme={lightTheme}>
+        <ThemeProvider theme={lightTheme}>
+            <div className="App">
 
                 <BrowserRouter>
                     <ResponsiveAppBar/>
@@ -21,15 +20,11 @@ function App() {
                         <Route path="/artists" element={<ArtistsList/>}/>
                         <Route path="/artist" element={<ArtistPage/>}/>
                     </Routes>
-
                 </BrowserRouter>
 
-                {/*<ArtistsList/>*/}
-                {/*<ArtistPage/>*/}
-            </ThemeProvider>
-
-        </div>
-);
+            </div>
+        </ThemeProvider>
+    );
 }
 
 export default App;

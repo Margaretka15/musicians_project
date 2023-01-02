@@ -20,17 +20,20 @@ type Props = {
     description: string;
     mainInstrument: string;
     localisation: string;
+    isHighlighted: boolean;
     // img: string | "";
 }
 
-function ArtistItem({id, name, lastname, mainInstrument, description}: Props): JSX.Element {
+function ArtistItem({id, name, lastname, mainInstrument, description, isHighlighted = false}: Props): JSX.Element {
 
 
     return (
         <>
-            <ListItem key={id} alignItems="flex-start">
+            <ListItem sx={{backgroundColor: 'background.paper'}} alignItems="flex-start" key={id}>
+
                 <ListItemAvatar>
-                    <Avatar alt={name} src="/static/images/avatar/1.jpg"/>
+                    <Avatar sx={{width: 200, height: 200, marginRight: '10px'}} variant="square" alt={name}
+                            src="/static/images/avatar/1.jpg"/>
                 </ListItemAvatar>
                 <ListItemText
                     primary={`${name} ${lastname}`}
@@ -41,10 +44,14 @@ function ArtistItem({id, name, lastname, mainInstrument, description}: Props): J
                                 component="span"
                                 variant="body2"
                                 color="text.primary"
-                            >
-                                {mainInstrument}
+                            >Główny instrument: {mainInstrument}
                             </Typography>
-                            {description}
+                            <Typography component="div"
+                                        variant="body2"
+                                        color="text.primary">
+                                {description}
+                            </Typography>
+
                         </>
                     }
                 />
@@ -55,12 +62,16 @@ function ArtistItem({id, name, lastname, mainInstrument, description}: Props): J
                 {/*    </ImageListItem>*/}
                 {/*</ImageListItem>*/}
 
-                <Button color='primary' variant='contained'>
-                    {/*<RouterLink to={`/artist?id=${id}`}>Sprawdź</RouterLink>*/}
-                    <Link style={{ textDecoration: 'none' }} color={"#fff"} component={RouterLink} to={`/artist?id=${id}`} >
-                        Sprawdź
-                    </Link>
-                </Button>
+                    <Button color='primary' variant='contained'>
+                        {/*<RouterLink to={`/artist?id=${id}`}>Sprawdź</RouterLink>*/}
+                        <Link style={{textDecoration: 'none'}} color={"#fff"} component={RouterLink}
+                              to={`/artist?id=${id}`}>
+                            Sprawdź
+                        </Link>
+                    </Button>
+
+
+
 
             </ListItem>
             <Divider variant="inset" component="li"/>

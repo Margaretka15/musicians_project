@@ -6,6 +6,7 @@ interface IArtist {
     mainInstrument: string;
     otherInstruments: string[];
     localisation: string;
+    isHighlighted: boolean;
 }
 
 export default IArtist;
