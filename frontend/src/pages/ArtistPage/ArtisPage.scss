@@ -1,0 +1,35 @@
+.wrapper {
+  display: flex;
+  align-items: stretch;
+  margin-top: 4rem;
+}
+.main-section {
+  padding: 1%;
+  display: flex;
+
+  &__about {
+    padding: 0 5%;
+    width: 100%
+  }
+}
+
+.side-section {
+  width: 100%;
+  position: relative;
+  //flex: 1;
+
+  &__details {
+    position: relative;
+  //justify-self: flex-end;
+  }
+
+  &__avatar {
+    position: absolute;
+    //margin: 0 auto;
+    top: 0;
+    //left: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    z-index: 10;
+  }
+}
